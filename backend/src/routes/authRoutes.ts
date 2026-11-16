@@ -10,7 +10,7 @@ const router = Router();
 
 /** Stricter limit on credential endpoints to slow brute-force attempts. */
 const authLimiter = rateLimit({
-  windowMs: 15 * 60 * 1000,
+  windowMs: 20 * 60 * 1000,
   max: env.isProd ? 20 : 100,
   standardHeaders: true,
   legacyHeaders: false,
